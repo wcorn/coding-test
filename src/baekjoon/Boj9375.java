@@ -11,7 +11,7 @@ public class Boj9375 {
     private static Item[] bucket = new Item[1000];
     private static int[] count;
 
-    public static class Item {
+    private static class Item {
         private String key;
         private final String value;
         Item nextItem;
@@ -30,7 +30,7 @@ public class Boj9375 {
         }
     }
 
-    public static class MyHashMap {
+    private static class MyHashMap {
         public void put(Item addItem) {
             int i = 0;
             while (true) {
@@ -50,7 +50,7 @@ public class Boj9375 {
             }
         }
 
-        public int CombinationHashCount() {
+        private int CombinationHashCount() {
             int result = 1;
             for (int i = 0; i < 1000; i++) {
                 result = result * (count[i] + 1);

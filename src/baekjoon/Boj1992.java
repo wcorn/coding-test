@@ -9,7 +9,7 @@ public class Boj1992 {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static int[][] arr;
 
-    public static String conquer(int x, int y, int size) {
+    private static String conquer(int x, int y, int size) {
         String res = "";
         int temp = arr[x][y];
         for (int i = x; i < x + size; i++) {

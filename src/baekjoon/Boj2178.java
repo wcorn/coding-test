@@ -15,7 +15,7 @@ public class Boj2178 {
     static int[] dx = {-1, 1, 0, 0};
     static int[] dy = {0, 0, -1, 1};
 
-    public static void BFS(int x, int y) {
+    private static void BFS(int x, int y) {
         Queue<int[]> q = new LinkedList<>();
         q.add(new int[]{x, y});
         visited[x][y] = true;

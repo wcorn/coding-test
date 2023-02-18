@@ -11,25 +11,25 @@ public class Boj1927 {
     static int temp;
     static int top;
 
-    public static void add(int data) {
+    private static void add(int data) {
         arr[++top] = data;
         minHeapSortUp();
     }
 
-    public static void remove() {
+    private static void remove() {
         sb.append(arr[1] + "\n");
         arr[1] = arr[top];
         arr[top--] = 0;
         minHeapSortDown();
     }
 
-    public static void swap(int a, int b) {
+    private static void swap(int a, int b) {
         temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;
     }
 
-    public static void minHeapSortUp() {
+    private static void minHeapSortUp() {
         int tempTop = top;
         while (tempTop != 1) {
             if (arr[tempTop / 2] > arr[tempTop]) {
@@ -41,7 +41,7 @@ public class Boj1927 {
         }
     }
 
-    public static void minHeapSortDown() {
+    private static void minHeapSortDown() {
         int flag = 1;
         int target;
         while (flag <= top) {

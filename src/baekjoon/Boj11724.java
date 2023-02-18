@@ -12,7 +12,7 @@ public class Boj11724 {
     static StringTokenizer st;
     static boolean[] visited;
 
-    public static class Node {
+    private static class Node {
         int data;
         ArrayList<Node> nodeList;
 
@@ -26,7 +26,7 @@ public class Boj11724 {
         }
     }
 
-    public static void DFS(Node node) {
+    private static void DFS(Node node) {
         visited[node.data] = true;
         sb.append(node.data + " ");
         if (node.nodeList.isEmpty()) return;

@@ -15,7 +15,7 @@ public class Boj1389 {
     static int M;
     static StringTokenizer st;
 
-    public static int result() {
+    private static int result() {
         int small = Integer.MAX_VALUE;
         int smallIndex = 1;
         for (int i = 1; i <= N; i++) {
@@ -30,7 +30,7 @@ public class Boj1389 {
         }
         return smallIndex;
     }
-    public static void solve(){
+    private static void solve(){
         for (int k = 1; k <= N; k++) {
             for (int i = 1; i <= N; i++) {
                 for (int j = 1; j <= N; j++) {

@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 class Boj1697 {
     static int[] check;
-    static void BFS(int x,int k) {
+    private static void BFS(int x,int k) {
         Queue<Integer> queue = new LinkedList<>();
 
         queue.offer(x);

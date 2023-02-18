@@ -8,7 +8,7 @@ public class Boj1074 {
     static StringTokenizer st;
     static int count = 0;
 
-    public static void Recursion(int x, int y, int size) {
+    private static void Recursion(int x, int y, int size) {
         if(size == 1)
             return;
 

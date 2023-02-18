@@ -10,7 +10,7 @@ public class Boj1931 {
     static StringTokenizer st;
     static ArrayList<Class> list = new ArrayList<>();
 
-    static class Class {
+    private static class Class {
         int start;
         int end;
 
@@ -20,7 +20,7 @@ public class Boj1931 {
         }
     }
 
-    public static class ClassComparator implements Comparator<Class> {
+    private static class ClassComparator implements Comparator<Class> {
 
         @Override
         public int compare(Class o1, Class o2) {
@@ -36,7 +36,7 @@ public class Boj1931 {
         }
     }
 
-    public static int ActivitySelection() {
+    private static int ActivitySelection() {
         int count = 0;
         int lastTime = 0;
         for (int i = 0; i < list.size(); i++) {

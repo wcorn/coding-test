@@ -12,7 +12,7 @@ public class Boj18870 {
     static int[] sortArr;
     static int[] deduplicatedArr;
 
-    public static int BinarySearch(int target) {
+    private static int BinarySearch(int target) {
         int low = 0;
         int high = deduplicatedArr.length - 1;
         int mid;
@@ -28,7 +28,7 @@ public class Boj18870 {
         return -1;
     }
 
-    static void DualPivotQuicksort(int left, int right) {
+    private static void DualPivotQuicksort(int left, int right) {
         if (right > left) {
             if (sortArr[left] > sortArr[right]) swap(left, right);
             int lP = sortArr[left], rP = sortArr[right];
@@ -59,13 +59,13 @@ public class Boj18870 {
         }
     }
 
-    static void swap(int i, int j) {
+    private static void swap(int i, int j) {
         final int tmp = sortArr[i];
         sortArr[i] = sortArr[j];
         sortArr[j] = tmp;
     }
 
-    public static void Deduplication() {
+    private static void Deduplication() {
         int[] tempArr = new int[arr.length];
         int flag = sortArr[0];
         int index = 0;

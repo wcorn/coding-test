@@ -12,22 +12,22 @@ public class Boj11279 {
     static int[] arr;
     static int temp;
     static int top;
-    public static void add(int x){
+    private static void add(int x){
         arr[++top] = x;
         maxHeapSortUp();
     }
-    public static void remove(){
+    private static void remove(){
         sb.append(arr[1] + "\n");
         arr[1] = arr[top];
         arr[top--] = 0;
         maxHeapSortDown();
     }
-    public static void swap(int a, int b) {
+    private static void swap(int a, int b) {
         temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;
     }
-    public static void maxHeapSortUp(){
+    private static void maxHeapSortUp(){
         int tempTop = top;
         while (tempTop != 1) {
             if (arr[tempTop / 2] < arr[tempTop]) {
@@ -38,7 +38,7 @@ public class Boj11279 {
             break;
         }
     }
-    public static void maxHeapSortDown(){
+    private static void maxHeapSortDown(){
         int flag = 1;
         int target;
         while (flag <= top) {

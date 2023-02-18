@@ -5,7 +5,7 @@ import java.io.*;
 public class Boj11727 {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static int[] arr;
-    static void DP(){
+    private static void DP(){
         arr[1] = 1;
         arr[2] = 3;
         for(int i=3;i<arr.length;i++){

@@ -21,7 +21,7 @@ public class Boj2630 {
     static StringTokenizer st;
     static int[] result = new int[2];
 
-    public static void Divide(int left, int right, int top, int bottom) {
+    private static void Divide(int left, int right, int top, int bottom) {
         int length = right - left + 1;
         int divdieLength = length / 2;
         int widthMid = left + divdieLength;
@@ -32,7 +32,7 @@ public class Boj2630 {
         Conquer(widthMid, right, heightMid, bottom);
     }
 
-    public static void Conquer(int left, int right, int top, int bottom) {
+    private static void Conquer(int left, int right, int top, int bottom) {
         int flag = arr[left][top];
         for (int i = left; i <= right; i++) {
             for (int j = top; j <= bottom; j++) {

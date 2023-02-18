@@ -13,7 +13,7 @@ public class Boj1260 {
     static int M;
     static int V;
 
-    public static class NodeComparator implements Comparator<Node> {
+    private static class NodeComparator implements Comparator<Node> {
         @Override
         public int compare(Node a, Node b) {
             if (a.data > b.data) return 1;
@@ -22,7 +22,7 @@ public class Boj1260 {
         }
     }
 
-    public static class Node {
+    private static class Node {
         int data;
         ArrayList<Node> nodeList;
 
@@ -41,7 +41,7 @@ public class Boj1260 {
         }
     }
 
-    public static void DFS(Node node) {
+    private static void DFS(Node node) {
         visited[node.data] = true;
         sb.append(node.data + " ");
         if (node.nodeList.isEmpty()) return;
@@ -53,7 +53,7 @@ public class Boj1260 {
         }
     }
 
-    public static void BFS(Node node) {
+    private static void BFS(Node node) {
         Queue<Node> queue = new LinkedList<Node>() {};
         queue.offer(node);
         visited[node.data] = true;

@@ -11,7 +11,7 @@ public class Boj1780 {
     static int[][] arr;
     static int[] result = new int[3];
 
-    public static void divdie(int left, int right, int top, int bottom) {
+    private static void divdie(int left, int right, int top, int bottom) {
         int length = right - left + 1;
         int divdieLength = length / 3;
         int[][][] divdieArr = new int[3][3][2];
@@ -28,7 +28,7 @@ public class Boj1780 {
         }
     }
 
-    public static void Conquer(int left, int right, int top, int bottom) {
+    private static void Conquer(int left, int right, int top, int bottom) {
         int flag = arr[left][top];
         for (int i = left; i <= right; i++) {
             for (int j = top; j <= bottom; j++) {

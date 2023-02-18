@@ -12,7 +12,7 @@ public class Boj11659 {
     static int[] arr;
     static int[] sum;
 
-    public static void NestedSum(int N) {
+    private static void NestedSum(int N) {
         for (int i = 2; i < N; i++) {
             sum[i] = arr[i] + sum[i - 1];
         }
